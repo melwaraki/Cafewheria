@@ -9,16 +9,16 @@ import Foundation
 
 class VenuesRouter {
     
-    var coffeeShopCategoryId = "+4bf58dd8d48988d1e0931735"
+    static var coffeeShopCategoryId = "+4bf58dd8d48988d1e0931735"
     
-    func getNearbyCoffeeShops(latitude: String, longitude: String, completion: @escaping (Result<[Venue], Error>) -> Void) {
+    static func getNearbyCoffeeShops(latitude: String, longitude: String, completion: @escaping (Result<[Venue], Error>) -> Void) {
         Router().get(VenuesRequestResponse.self, path: "venues/search", queryItems: [
             URLQueryItem(name: "ll", value: "\(latitude),\(longitude)"),
             URLQueryItem(name: "categoryId", value: coffeeShopCategoryId)]) { result in
             
             switch result {
             case .success(let requestResponse):
-                completion(.success(requestResponse.response.venues))
+                completion(.success(requestResponse.response.venues.sorted()))
             case .failure(let error):
                 completion(.failure(error))
             }

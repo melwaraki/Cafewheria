@@ -35,7 +35,7 @@ class Router {
     func get<T: Decodable>(_ type: T.Type, path: String, queryItems: [URLQueryItem], completion: @escaping (Result<T, Error>) -> Void) {
         
         guard let url = buildURL(path: path, queryItems: queryItems) else {
-            completion(.failure(URLError.invalidURL))
+            completion(.failure(CustomError.invalidURL))
             return
         }
         
@@ -49,7 +49,7 @@ class Router {
             }
 
             guard let data = data else {
-                completion(.failure(URLError.noData))
+                completion(.failure(CustomError.noData))
                 return
             }
             
@@ -65,7 +65,7 @@ class Router {
     }
 }
 
-enum URLError: Error {
+enum CustomError: Error {
     case invalidURL
     case noData
     case invalidData

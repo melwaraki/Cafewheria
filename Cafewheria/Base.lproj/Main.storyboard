@@ -12,18 +12,66 @@
         <!--Cafewheria-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Cafewheria" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="VenuesViewController" customModule="Cafewheria" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="TX0-9W-txh">
+                                <rect key="frame" x="16" y="420" width="382" height="56.5"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="EMZ-ug-E9q">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="20"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKN-Li-vnT">
+                                        <rect key="frame" x="0.0" y="36" width="382" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemGray3Color"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rQ4-b4-9m1">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="366" id="5qm-ch-XJq">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="366"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5qm-ch-XJq" id="At0-ew-u4r">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="366"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="yK1-pB-LJV"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="92W-pf-ttc"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TX0-9W-txh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3wD-xb-G0F"/>
+                            <constraint firstItem="rQ4-b4-9m1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="G3j-Yl-5vh"/>
+                            <constraint firstItem="rQ4-b4-9m1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QT7-wM-x4K"/>
+                            <constraint firstItem="TX0-9W-txh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Zys-V7-qaE"/>
+                            <constraint firstItem="rQ4-b4-9m1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="kQX-Ic-db0"/>
+                            <constraint firstAttribute="bottom" secondItem="rQ4-b4-9m1" secondAttribute="bottom" id="kk0-QV-tBl"/>
+                            <constraint firstItem="TX0-9W-txh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tGC-u7-UEp"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Cafewheria" id="bf3-8j-hjV"/>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="EMZ-ug-E9q" id="ecs-6R-8bG"/>
+                        <outlet property="emptyScreenLabel" destination="GKN-Li-vnT" id="xIo-db-fHT"/>
+                        <outlet property="tableView" destination="rQ4-b4-9m1" id="VsS-Lf-nFN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="794" y="98"/>
+            <point key="canvasLocation" x="792.75362318840587" y="97.767857142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eOI-qj-BBT">
@@ -47,6 +95,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

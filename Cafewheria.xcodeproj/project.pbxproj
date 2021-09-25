@@ -12,15 +12,18 @@
 		591DB29826FF7F9400DB4A33 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591DB29726FF7F9400DB4A33 /* Venue.swift */; };
 		591DB29A26FF7FA900DB4A33 /* VenuesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591DB29926FF7FA900DB4A33 /* VenuesResponse.swift */; };
 		591DB29C26FF7FB400DB4A33 /* VenuesRequestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591DB29B26FF7FB400DB4A33 /* VenuesRequestResponse.swift */; };
+		591DB29F26FF81A000DB4A33 /* VenuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591DB29E26FF81A000DB4A33 /* VenuesViewController.swift */; };
 		59B0827926FF220D00E72C17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B0827826FF220D00E72C17 /* AppDelegate.swift */; };
 		59B0827B26FF220D00E72C17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B0827A26FF220D00E72C17 /* SceneDelegate.swift */; };
-		59B0827D26FF220D00E72C17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B0827C26FF220D00E72C17 /* ViewController.swift */; };
 		59B0828026FF220D00E72C17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59B0827E26FF220D00E72C17 /* Main.storyboard */; };
 		59B0828326FF220D00E72C17 /* Cafewheria.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 59B0828126FF220D00E72C17 /* Cafewheria.xcdatamodeld */; };
 		59B0828526FF221000E72C17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59B0828426FF221000E72C17 /* Assets.xcassets */; };
 		59B0828826FF221000E72C17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59B0828626FF221000E72C17 /* LaunchScreen.storyboard */; };
 		59B0829326FF221000E72C17 /* CafewheriaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B0829226FF221000E72C17 /* CafewheriaTests.swift */; };
 		59B0829E26FF221000E72C17 /* CafewheriaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B0829D26FF221000E72C17 /* CafewheriaUITests.swift */; };
+		59EBC2AB26FF97BE00DB6002 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EBC2AA26FF97BE00DB6002 /* Extensions.swift */; };
+		59EBC2B126FF9ABB00DB6002 /* VenuesViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EBC2B026FF9ABB00DB6002 /* VenuesViewController+UITableView.swift */; };
+		59EBC2B326FF9AE000DB6002 /* VenuesViewController+CLLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EBC2B226FF9AE000DB6002 /* VenuesViewController+CLLocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,10 +49,10 @@
 		591DB29726FF7F9400DB4A33 /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 		591DB29926FF7FA900DB4A33 /* VenuesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesResponse.swift; sourceTree = "<group>"; };
 		591DB29B26FF7FB400DB4A33 /* VenuesRequestResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesRequestResponse.swift; sourceTree = "<group>"; };
+		591DB29E26FF81A000DB4A33 /* VenuesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesViewController.swift; sourceTree = "<group>"; };
 		59B0827526FF220D00E72C17 /* Cafewheria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cafewheria.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59B0827826FF220D00E72C17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59B0827A26FF220D00E72C17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		59B0827C26FF220D00E72C17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		59B0827F26FF220D00E72C17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		59B0828226FF220D00E72C17 /* Cafewheria.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cafewheria.xcdatamodel; sourceTree = "<group>"; };
 		59B0828426FF221000E72C17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,6 +64,9 @@
 		59B0829926FF221000E72C17 /* CafewheriaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CafewheriaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59B0829D26FF221000E72C17 /* CafewheriaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafewheriaUITests.swift; sourceTree = "<group>"; };
 		59B0829F26FF221000E72C17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59EBC2AA26FF97BE00DB6002 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		59EBC2B026FF9ABB00DB6002 /* VenuesViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VenuesViewController+UITableView.swift"; sourceTree = "<group>"; };
+		59EBC2B226FF9AE000DB6002 /* VenuesViewController+CLLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VenuesViewController+CLLocationManager.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,14 @@
 			path = Venues;
 			sourceTree = "<group>";
 		};
+		591DB29D26FF818600DB4A33 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				59EBC2AF26FF9AA000DB6002 /* Venues */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		59B0826C26FF220D00E72C17 = {
 			isa = PBXGroup;
 			children = (
@@ -138,11 +152,12 @@
 		59B0827726FF220D00E72C17 /* Cafewheria */ = {
 			isa = PBXGroup;
 			children = (
+				591DB29D26FF818600DB4A33 /* Controller */,
 				591DB29526FF7F8000DB4A33 /* Model */,
 				591DB29026FF452700DB4A33 /* Networking */,
+				59EBC2A926FF979D00DB6002 /* Core */,
 				59B0827826FF220D00E72C17 /* AppDelegate.swift */,
 				59B0827A26FF220D00E72C17 /* SceneDelegate.swift */,
-				59B0827C26FF220D00E72C17 /* ViewController.swift */,
 				59B0827E26FF220D00E72C17 /* Main.storyboard */,
 				59B0828426FF221000E72C17 /* Assets.xcassets */,
 				59B0828626FF221000E72C17 /* LaunchScreen.storyboard */,
@@ -168,6 +183,24 @@
 				59B0829F26FF221000E72C17 /* Info.plist */,
 			);
 			path = CafewheriaUITests;
+			sourceTree = "<group>";
+		};
+		59EBC2A926FF979D00DB6002 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				59EBC2AA26FF97BE00DB6002 /* Extensions.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		59EBC2AF26FF9AA000DB6002 /* Venues */ = {
+			isa = PBXGroup;
+			children = (
+				591DB29E26FF81A000DB4A33 /* VenuesViewController.swift */,
+				59EBC2B026FF9ABB00DB6002 /* VenuesViewController+UITableView.swift */,
+				59EBC2B226FF9AE000DB6002 /* VenuesViewController+CLLocationManager.swift */,
+			);
+			path = Venues;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,13 +334,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				591DB29426FF7DCC00DB4A33 /* VenuesRouter.swift in Sources */,
-				59B0827D26FF220D00E72C17 /* ViewController.swift in Sources */,
 				59B0827926FF220D00E72C17 /* AppDelegate.swift in Sources */,
 				591DB29826FF7F9400DB4A33 /* Venue.swift in Sources */,
+				59EBC2B126FF9ABB00DB6002 /* VenuesViewController+UITableView.swift in Sources */,
 				591DB29A26FF7FA900DB4A33 /* VenuesResponse.swift in Sources */,
 				591DB29226FF453700DB4A33 /* Router.swift in Sources */,
+				59EBC2B326FF9AE000DB6002 /* VenuesViewController+CLLocationManager.swift in Sources */,
+				59EBC2AB26FF97BE00DB6002 /* Extensions.swift in Sources */,
 				59B0828326FF220D00E72C17 /* Cafewheria.xcdatamodeld in Sources */,
 				591DB29C26FF7FB400DB4A33 /* VenuesRequestResponse.swift in Sources */,
+				591DB29F26FF81A000DB4A33 /* VenuesViewController.swift in Sources */,
 				59B0827B26FF220D00E72C17 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
