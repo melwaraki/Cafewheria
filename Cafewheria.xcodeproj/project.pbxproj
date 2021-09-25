@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		591DB29226FF453700DB4A33 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591DB29126FF453700DB4A33 /* Router.swift */; };
+		591DB29426FF7DCC00DB4A33 /* VenuesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591DB29326FF7DCC00DB4A33 /* VenuesRouter.swift */; };
+		591DB29826FF7F9400DB4A33 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591DB29726FF7F9400DB4A33 /* Venue.swift */; };
+		591DB29A26FF7FA900DB4A33 /* VenuesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591DB29926FF7FA900DB4A33 /* VenuesResponse.swift */; };
+		591DB29C26FF7FB400DB4A33 /* VenuesRequestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591DB29B26FF7FB400DB4A33 /* VenuesRequestResponse.swift */; };
 		59B0827926FF220D00E72C17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B0827826FF220D00E72C17 /* AppDelegate.swift */; };
 		59B0827B26FF220D00E72C17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B0827A26FF220D00E72C17 /* SceneDelegate.swift */; };
 		59B0827D26FF220D00E72C17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B0827C26FF220D00E72C17 /* ViewController.swift */; };
@@ -36,6 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		591DB29126FF453700DB4A33 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		591DB29326FF7DCC00DB4A33 /* VenuesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesRouter.swift; sourceTree = "<group>"; };
+		591DB29726FF7F9400DB4A33 /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		591DB29926FF7FA900DB4A33 /* VenuesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesResponse.swift; sourceTree = "<group>"; };
+		591DB29B26FF7FB400DB4A33 /* VenuesRequestResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesRequestResponse.swift; sourceTree = "<group>"; };
 		59B0827526FF220D00E72C17 /* Cafewheria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cafewheria.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59B0827826FF220D00E72C17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59B0827A26FF220D00E72C17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +88,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		591DB29026FF452700DB4A33 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				591DB29126FF453700DB4A33 /* Router.swift */,
+				591DB29326FF7DCC00DB4A33 /* VenuesRouter.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		591DB29526FF7F8000DB4A33 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				591DB29626FF7F8A00DB4A33 /* Venues */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		591DB29626FF7F8A00DB4A33 /* Venues */ = {
+			isa = PBXGroup;
+			children = (
+				591DB29726FF7F9400DB4A33 /* Venue.swift */,
+				591DB29926FF7FA900DB4A33 /* VenuesResponse.swift */,
+				591DB29B26FF7FB400DB4A33 /* VenuesRequestResponse.swift */,
+			);
+			path = Venues;
+			sourceTree = "<group>";
+		};
 		59B0826C26FF220D00E72C17 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +138,8 @@
 		59B0827726FF220D00E72C17 /* Cafewheria */ = {
 			isa = PBXGroup;
 			children = (
+				591DB29526FF7F8000DB4A33 /* Model */,
+				591DB29026FF452700DB4A33 /* Networking */,
 				59B0827826FF220D00E72C17 /* AppDelegate.swift */,
 				59B0827A26FF220D00E72C17 /* SceneDelegate.swift */,
 				59B0827C26FF220D00E72C17 /* ViewController.swift */,
@@ -261,9 +300,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				591DB29426FF7DCC00DB4A33 /* VenuesRouter.swift in Sources */,
 				59B0827D26FF220D00E72C17 /* ViewController.swift in Sources */,
 				59B0827926FF220D00E72C17 /* AppDelegate.swift in Sources */,
+				591DB29826FF7F9400DB4A33 /* Venue.swift in Sources */,
+				591DB29A26FF7FA900DB4A33 /* VenuesResponse.swift in Sources */,
+				591DB29226FF453700DB4A33 /* Router.swift in Sources */,
 				59B0828326FF220D00E72C17 /* Cafewheria.xcdatamodeld in Sources */,
+				591DB29C26FF7FB400DB4A33 /* VenuesRequestResponse.swift in Sources */,
 				59B0827B26FF220D00E72C17 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
