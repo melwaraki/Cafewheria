@@ -22,4 +22,9 @@ extension VenuesViewController: UITableViewDataSource, UITableViewDelegate {
         cell.accessoryType = .disclosureIndicator
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        venues[indexPath.row].openInMaps()
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }

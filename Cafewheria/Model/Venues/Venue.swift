@@ -6,19 +6,33 @@
 //
 
 import Foundation
+import CoreLocation
+import MapKit
 
 struct Venue: Decodable, Identifiable {
     let id: String
     let name: String
     let location: Location
-    
-    var distance: String {
-        return "\(location.distance)m"
-    }
 }
 
 struct Location: Decodable {
     let distance: Int
+    let lat: Double
+    let lng: Double
+}
+
+extension Venue {
+    var distance: String {
+        return "\(location.distance)m"
+    }
+    
+    func openInMaps() {
+        let coordinates = CLLocationCoordinate2DMake(location.lat, location.lng)
+        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = name
+        mapItem.openInMaps(launchOptions: nil)
+    }
 }
 
 extension Array where Element == Venue {
