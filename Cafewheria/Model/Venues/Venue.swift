@@ -22,6 +22,11 @@ struct Location: Decodable {
 }
 
 extension Venue {
+    
+    var isNearby: Bool {
+        return location.distance < 1000
+    }
+    
     var distance: String {
         return "\(location.distance)m"
     }
@@ -38,5 +43,13 @@ extension Venue {
 extension Array where Element == Venue {
     func sorted() -> [Venue] {
         return sorted(by: {$0.location.distance < $1.location.distance})
+    }
+    
+    func filterToNearby() -> [Venue] {
+        return filter({$0.isNearby})
+    }
+    
+    func filterToFar() -> [Venue] {
+        filter({!$0.isNearby})
     }
 }

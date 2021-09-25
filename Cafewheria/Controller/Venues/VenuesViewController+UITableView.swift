@@ -9,12 +9,30 @@ import UIKit
 
 extension VenuesViewController: UITableViewDataSource, UITableViewDelegate {
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return venues.count
+        if section == 0 {
+            return venues.filterToNearby().count
+        } else {
+            return venues.filterToFar().count
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Nearby"
+        } else {
+            return "Others"
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let venue = venues[indexPath.item]
+        
+        let filteredVenues = indexPath.section == 0 ? venues.filterToNearby() : venues.filterToFar()
+        let venue = filteredVenues[indexPath.item]
         
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
         cell.textLabel?.text = venue.name
