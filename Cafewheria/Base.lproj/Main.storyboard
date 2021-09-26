@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -58,11 +59,34 @@
                                     <constraint firstAttribute="width" priority="750" constant="350" id="d2O-Tz-SRK"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYT-tJ-x24">
+                                <rect key="frame" x="32" y="801" width="350" height="45"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="TPL-dN-1Nc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="🥳 I'M FEELING LUCKY 🤩">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tappedFeelingLucky:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Nw-co-qLG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="gYT-tJ-x24" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1mq-hJ-4F0"/>
                             <constraint firstItem="TX0-9W-txh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3wD-xb-G0F"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gYT-tJ-x24" secondAttribute="bottom" constant="16" id="4VG-eT-bRF"/>
+                            <constraint firstItem="gYT-tJ-x24" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="7XQ-QH-TLl"/>
                             <constraint firstItem="rQ4-b4-9m1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="G3j-Yl-5vh"/>
                             <constraint firstItem="rQ4-b4-9m1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QT7-wM-x4K"/>
                             <constraint firstItem="TX0-9W-txh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Zys-V7-qaE"/>
@@ -75,6 +99,7 @@
                     <connections>
                         <outlet property="activityIndicatorView" destination="EMZ-ug-E9q" id="ecs-6R-8bG"/>
                         <outlet property="emptyScreenLabel" destination="GKN-Li-vnT" id="xIo-db-fHT"/>
+                        <outlet property="feelingLuckyButton" destination="gYT-tJ-x24" id="Yl5-g9-fxf"/>
                         <outlet property="tableView" destination="rQ4-b4-9m1" id="VsS-Lf-nFN"/>
                         <outlet property="toggleLocationButton" destination="Pmv-uc-c46" id="Wv8-B0-PZE"/>
                     </connections>
@@ -103,6 +128,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
