@@ -9,20 +9,16 @@ import Foundation
 import CoreLocation
 import MapKit
 
-struct Venue: Decodable, Identifiable, Equatable {
+struct Venue: Decodable, Identifiable {
     let id: String
     let name: String
     let location: Location
-    
+}
+
+extension Venue: Equatable {
     static func == (lhs: Venue, rhs: Venue) -> Bool {
         return lhs.id == rhs.id
     }
-}
-
-struct Location: Decodable {
-    let distance: Int
-    let lat: Double
-    let lng: Double
 }
 
 extension Venue {

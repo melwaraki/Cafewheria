@@ -25,6 +25,7 @@
 		59EBC2B126FF9ABB00DB6002 /* VenuesViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EBC2B026FF9ABB00DB6002 /* VenuesViewController+UITableView.swift */; };
 		59EBC2B326FF9AE000DB6002 /* VenuesViewController+CLLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EBC2B226FF9AE000DB6002 /* VenuesViewController+CLLocationManager.swift */; };
 		59EBC2B52700B47B00DB6002 /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EBC2B42700B47B00DB6002 /* LocationTests.swift */; };
+		59EBC2B72700B9C000DB6002 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EBC2B62700B9C000DB6002 /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		59EBC2B026FF9ABB00DB6002 /* VenuesViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VenuesViewController+UITableView.swift"; sourceTree = "<group>"; };
 		59EBC2B226FF9AE000DB6002 /* VenuesViewController+CLLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VenuesViewController+CLLocationManager.swift"; sourceTree = "<group>"; };
 		59EBC2B42700B47B00DB6002 /* LocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
+		59EBC2B62700B9C000DB6002 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				591DB29726FF7F9400DB4A33 /* Venue.swift */,
+				59EBC2B62700B9C000DB6002 /* Location.swift */,
 				591DB29926FF7FA900DB4A33 /* VenuesResponse.swift */,
 				591DB29B26FF7FB400DB4A33 /* VenuesRequestResponse.swift */,
 			);
@@ -342,6 +345,7 @@
 				59EBC2B126FF9ABB00DB6002 /* VenuesViewController+UITableView.swift in Sources */,
 				591DB29A26FF7FA900DB4A33 /* VenuesResponse.swift in Sources */,
 				591DB29226FF453700DB4A33 /* Router.swift in Sources */,
+				59EBC2B72700B9C000DB6002 /* Location.swift in Sources */,
 				59EBC2B326FF9AE000DB6002 /* VenuesViewController+CLLocationManager.swift in Sources */,
 				59EBC2AB26FF97BE00DB6002 /* Extensions.swift in Sources */,
 				59B0828326FF220D00E72C17 /* Cafewheria.xcdatamodeld in Sources */,
