@@ -27,7 +27,7 @@ class VenuesViewController: UIViewController {
     }
     
     @IBAction func tappedToggleLocationButton(_ sender: Any) {
-        guard let url = URL(string: "\(UIApplication.openSettingsURLString)&path=LOCATION/") else {
+        guard let url = URL(string: UIApplication.openSettingsURLString) else {
             return
         }
         
