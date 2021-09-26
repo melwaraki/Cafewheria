@@ -26,18 +26,31 @@
                                 </connections>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="TX0-9W-txh">
-                                <rect key="frame" x="16" y="420" width="382" height="56.5"/>
+                                <rect key="frame" x="111" y="396.5" width="192.5" height="103.5"/>
                                 <subviews>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="EMZ-ug-E9q">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="20"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="192.5" height="20"/>
                                     </activityIndicatorView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKN-Li-vnT">
-                                        <rect key="frame" x="0.0" y="36" width="382" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="36" width="192.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemGray3Color"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nzu-Do-UYL">
+                                        <rect key="frame" x="0.0" y="72.5" width="192.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Toggle Location Services">
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="14"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tappedToggleLocationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6BA-iQ-wFD"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" priority="750" constant="350" id="d2O-Tz-SRK"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -46,7 +59,7 @@
                             <constraint firstItem="TX0-9W-txh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3wD-xb-G0F"/>
                             <constraint firstItem="rQ4-b4-9m1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="G3j-Yl-5vh"/>
                             <constraint firstItem="rQ4-b4-9m1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QT7-wM-x4K"/>
-                            <constraint firstItem="TX0-9W-txh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Zys-V7-qaE"/>
+                            <constraint firstItem="TX0-9W-txh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Zys-V7-qaE"/>
                             <constraint firstItem="rQ4-b4-9m1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="kQX-Ic-db0"/>
                             <constraint firstAttribute="bottom" secondItem="rQ4-b4-9m1" secondAttribute="bottom" id="kk0-QV-tBl"/>
                             <constraint firstItem="TX0-9W-txh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tGC-u7-UEp"/>
@@ -57,6 +70,7 @@
                         <outlet property="activityIndicatorView" destination="EMZ-ug-E9q" id="ecs-6R-8bG"/>
                         <outlet property="emptyScreenLabel" destination="GKN-Li-vnT" id="xIo-db-fHT"/>
                         <outlet property="tableView" destination="rQ4-b4-9m1" id="VsS-Lf-nFN"/>
+                        <outlet property="toggleLocationButton" destination="Nzu-Do-UYL" id="5iU-n7-uat"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

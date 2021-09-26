@@ -27,16 +27,20 @@ extension Venue {
         return location.distance < 1000
     }
     
-    var distance: String {
-        return "\(location.distance)m"
+    var kmDistanceString: String {
+        let kmDistance = Double(location.distance)/1000
+        return String(format: "%.2fkm", kmDistance)
     }
     
     func openInMaps() {
         let coordinates = CLLocationCoordinate2DMake(location.lat, location.lng)
         let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+        
         let mapItem = MKMapItem(placemark: placemark)
         mapItem.name = name
-        mapItem.openInMaps(launchOptions: nil)
+        
+        let options = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking]
+        mapItem.openInMaps(launchOptions: options)
     }
 }
 

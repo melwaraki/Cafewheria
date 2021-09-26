@@ -12,15 +12,28 @@ class VenuesViewController: UIViewController {
     
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var emptyScreenLabel: UILabel!
+    @IBOutlet weak var toggleLocationButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
     var locationManager: CLLocationManager!
+    var toggleableViews: [UIView] = []
+    
     var venues: [Venue] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        checkLocation()
+        setupLocationManager()
+        toggleableViews = [activityIndicatorView, emptyScreenLabel, toggleLocationButton, tableView]
     }
+    
+    @IBAction func tappedToggleLocationButton(_ sender: Any) {
+        guard let url = URL(string: "\(UIApplication.openSettingsURLString)&path=LOCATION/") else {
+            return
+        }
+        
+        UIApplication.shared.open(url)
+    }
+    
     
     var state: ViewControllerState = .loading {
         didSet {
@@ -36,10 +49,14 @@ class VenuesViewController: UIViewController {
             activityIndicatorView.startAnimating()
             emptyScreenLabel.text = "Finding your nearest coffee shops..."
             hideAll(except: [activityIndicatorView, emptyScreenLabel])
-        case .error:
+        case .error(let message):
             activityIndicatorView.stopAnimating()
-            emptyScreenLabel.text = "Couldn't load nearby coffee shops"
-            hideAll(except: [emptyScreenLabel])
+            emptyScreenLabel.text = message
+            var viewsToShow: [UIView] = [emptyScreenLabel]
+            if locationManager.authorizationStatus == .denied {
+                viewsToShow.append(toggleLocationButton)
+            }
+            hideAll(except: viewsToShow)
         case .success:
             activityIndicatorView.stopAnimating()
             tableView.reloadData()
@@ -48,20 +65,10 @@ class VenuesViewController: UIViewController {
     }
     
     func hideAll(except views: [UIView]) {
-        for loopedView in [activityIndicatorView, emptyScreenLabel, tableView] {
-            loopedView?.isHidden = !views.contains(loopedView!)
+        for toggleableView in toggleableViews {
+            toggleableView.isHidden = !views.contains(toggleableView)
         }
     }
     
-    func checkLocation() {
-        locationManager = CLLocationManager()
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
-        updateViewController()
-        
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.startUpdatingLocation()
-        }
-    }
+    
 }

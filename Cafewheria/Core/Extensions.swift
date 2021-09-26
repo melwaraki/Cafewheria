@@ -9,7 +9,7 @@ import UIKit
 
 enum ViewControllerState {
     case loading
-    case error
+    case error(message: String)
     case success
 }
 

@@ -36,7 +36,7 @@ extension VenuesViewController: UITableViewDataSource, UITableViewDelegate {
         
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
         cell.textLabel?.text = venue.name
-        cell.detailTextLabel?.text = venue.distance
+        cell.detailTextLabel?.text = venue.kmDistanceString
         cell.accessoryType = .disclosureIndicator
         return cell
     }

@@ -13,6 +13,7 @@ extension VenuesViewController: CLLocationManagerDelegate {
         
         guard let latitude = userLocation.coordinate.latitude.toString(),
               let longitude = userLocation.coordinate.longitude.toString() else {
+                  presentErrorAlert(message: "Couldn't access location services")
                   return
               }
         
@@ -23,9 +24,33 @@ extension VenuesViewController: CLLocationManagerDelegate {
                 manager.stopUpdatingLocation()
                 self.state = .success
             case .failure(let error):
-                self.state = .error
+                self.state = .error(message: error.localizedDescription)
                 self.presentErrorAlert(message: error.localizedDescription)
             }
+        }
+    }
+    
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        if manager.authorizationStatus == .denied {
+            state = .error(message: "Location services not authorised")
+        } else {
+            checkLocation()
+        }
+    }
+    
+    func setupLocationManager() {
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        checkLocation()
+    }
+    
+    func checkLocation() {
+        state = .loading
+        locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.startUpdatingLocation()
         }
     }
 }
