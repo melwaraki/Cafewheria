@@ -26,25 +26,31 @@
                                 </connections>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="TX0-9W-txh">
-                                <rect key="frame" x="111" y="396.5" width="192.5" height="103.5"/>
+                                <rect key="frame" x="110.5" y="395.5" width="193" height="105.5"/>
                                 <subviews>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="EMZ-ug-E9q">
-                                        <rect key="frame" x="0.0" y="0.0" width="192.5" height="20"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="193" height="20"/>
                                     </activityIndicatorView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKN-Li-vnT">
-                                        <rect key="frame" x="0.0" y="36" width="192.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="36" width="193" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemGray3Color"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nzu-Do-UYL">
-                                        <rect key="frame" x="0.0" y="72.5" width="192.5" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="tinted" title="Toggle Location Services">
-                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="14"/>
-                                        </buttonConfiguration>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pmv-uc-c46">
+                                        <rect key="frame" x="0.0" y="72.5" width="193" height="33"/>
+                                        <color key="backgroundColor" red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="0.20736765072045737" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                        <inset key="contentEdgeInsets" minX="12" minY="8" maxX="12" maxY="8"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Toggle Location Services"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="tappedToggleLocationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6BA-iQ-wFD"/>
+                                            <action selector="tappedToggleLocationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4WG-eI-Kzf"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -70,7 +76,7 @@
                         <outlet property="activityIndicatorView" destination="EMZ-ug-E9q" id="ecs-6R-8bG"/>
                         <outlet property="emptyScreenLabel" destination="GKN-Li-vnT" id="xIo-db-fHT"/>
                         <outlet property="tableView" destination="rQ4-b4-9m1" id="VsS-Lf-nFN"/>
-                        <outlet property="toggleLocationButton" destination="Nzu-Do-UYL" id="5iU-n7-uat"/>
+                        <outlet property="toggleLocationButton" destination="Pmv-uc-c46" id="Wv8-B0-PZE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
