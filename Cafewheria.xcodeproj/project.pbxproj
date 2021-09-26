@@ -19,7 +19,6 @@
 		59B0828326FF220D00E72C17 /* Cafewheria.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 59B0828126FF220D00E72C17 /* Cafewheria.xcdatamodeld */; };
 		59B0828526FF221000E72C17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59B0828426FF221000E72C17 /* Assets.xcassets */; };
 		59B0828826FF221000E72C17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59B0828626FF221000E72C17 /* LaunchScreen.storyboard */; };
-		59B0829326FF221000E72C17 /* CafewheriaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B0829226FF221000E72C17 /* CafewheriaTests.swift */; };
 		59B0829E26FF221000E72C17 /* CafewheriaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B0829D26FF221000E72C17 /* CafewheriaUITests.swift */; };
 		59EBC2AB26FF97BE00DB6002 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EBC2AA26FF97BE00DB6002 /* Extensions.swift */; };
 		59EBC2B126FF9ABB00DB6002 /* VenuesViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EBC2B026FF9ABB00DB6002 /* VenuesViewController+UITableView.swift */; };
@@ -61,7 +60,6 @@
 		59B0828726FF221000E72C17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		59B0828926FF221000E72C17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59B0828E26FF221000E72C17 /* CafewheriaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CafewheriaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		59B0829226FF221000E72C17 /* CafewheriaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafewheriaTests.swift; sourceTree = "<group>"; };
 		59B0829426FF221000E72C17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59B0829926FF221000E72C17 /* CafewheriaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CafewheriaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59B0829D26FF221000E72C17 /* CafewheriaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafewheriaUITests.swift; sourceTree = "<group>"; };
@@ -175,7 +173,6 @@
 		59B0829126FF221000E72C17 /* CafewheriaTests */ = {
 			isa = PBXGroup;
 			children = (
-				59B0829226FF221000E72C17 /* CafewheriaTests.swift */,
 				59EBC2B42700B47B00DB6002 /* LocationTests.swift */,
 				59B0829426FF221000E72C17 /* Info.plist */,
 			);
@@ -360,7 +357,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				59EBC2B52700B47B00DB6002 /* LocationTests.swift in Sources */,
-				59B0829326FF221000E72C17 /* CafewheriaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
