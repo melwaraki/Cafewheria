@@ -23,7 +23,7 @@ extension Venue {
     
     var kmDistanceString: String {
         let kmDistance = Double(location.distance)/1000
-        return String(format: "%.2fkm", kmDistance)
+        return String(format: "%.1f", kmDistance)
     }
     
     func openInMaps() {

@@ -28,7 +28,7 @@ class LocationTests: XCTestCase {
     
     func testKmDistanceString() {
         let venue = Venue(id: "1234", name: "Mocka Venue", location: Location(distance: 38495, lat: 0, lng: 0))
-        XCTAssertEqual(venue.kmDistanceString, "38.49km")
+        XCTAssertEqual(venue.kmDistanceString, "38.5")
     }
 
 }

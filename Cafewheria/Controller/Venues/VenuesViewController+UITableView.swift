@@ -39,10 +39,8 @@ extension VenuesViewController: UITableViewDataSource, UITableViewDelegate {
         let filteredVenues = indexPath.section == 0 ? venues.filterToNearby() : venues.filterToFar()
         let venue = filteredVenues[indexPath.item]
         
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
-        cell.textLabel?.text = venue.name
-        cell.detailTextLabel?.text = venue.kmDistanceString
-        cell.accessoryType = .disclosureIndicator
+        let cell = tableView.dequeueReusableCell(withIdentifier: "VenueTableViewCell") as! VenueTableViewCell
+        cell.setup(with: venue)
         return cell
     }
     

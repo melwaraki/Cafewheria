@@ -4,13 +4,12 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Cafewheria-->
+        <!--CAFEWHERIA-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="VenuesViewController" customModule="Cafewheria" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,7 +19,58 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rQ4-b4-9m1">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VenueTableViewCell" rowHeight="58" id="Vba-J3-Z7X" customClass="VenueTableViewCell" customModule="Cafewheria" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="58"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vba-J3-Z7X" id="4Tz-Qu-aJG">
+                                            <rect key="frame" x="0.0" y="0.0" width="384.5" height="58"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="AB9-sc-KI5">
+                                                    <rect key="frame" x="20" y="11" width="356.5" height="36"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GmF-3Y-FGn">
+                                                            <rect key="frame" x="0.0" y="0.0" width="25.5" height="36"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="0.3" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0D3-FY-Kfv">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="25.5" height="24"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                    <color key="textColor" systemColor="systemGrayColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="km" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FH5-rs-O6r">
+                                                                    <rect key="frame" x="0.0" y="24" width="25.5" height="12"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                                    <color key="textColor" systemColor="systemGrayColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Costa Coffee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZbC-rw-36m">
+                                                            <rect key="frame" x="41.5" y="0.0" width="315" height="36"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="AB9-sc-KI5" secondAttribute="bottom" id="SaD-jT-mh5"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="AB9-sc-KI5" secondAttribute="trailing" id="ZGC-Wk-A4i"/>
+                                                <constraint firstItem="AB9-sc-KI5" firstAttribute="leading" secondItem="4Tz-Qu-aJG" secondAttribute="leadingMargin" id="ePG-2y-Vd8"/>
+                                                <constraint firstItem="AB9-sc-KI5" firstAttribute="top" secondItem="4Tz-Qu-aJG" secondAttribute="topMargin" id="pGC-dM-XgS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="distanceLabel" destination="0D3-FY-Kfv" id="r3Z-hE-tsf"/>
+                                            <outlet property="venueNameLabel" destination="ZbC-rw-36m" id="Hao-GF-RhC"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="yK1-pB-LJV"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="92W-pf-ttc"/>
@@ -55,13 +105,14 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" priority="750" constant="350" id="d2O-Tz-SRK"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYT-tJ-x24">
                                 <rect key="frame" x="32" y="801" width="350" height="45"/>
-                                <color key="backgroundColor" name="AccentColor"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="TPL-dN-1Nc"/>
                                 </constraints>
@@ -81,7 +132,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="gYT-tJ-x24" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1mq-hJ-4F0"/>
                             <constraint firstItem="TX0-9W-txh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3wD-xb-G0F"/>
@@ -95,7 +146,7 @@
                             <constraint firstItem="TX0-9W-txh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tGC-u7-UEp"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Cafewheria" id="bf3-8j-hjV"/>
+                    <navigationItem key="navigationItem" title="CAFEWHERIA" id="bf3-8j-hjV"/>
                     <connections>
                         <outlet property="activityIndicatorView" destination="EMZ-ug-E9q" id="ecs-6R-8bG"/>
                         <outlet property="emptyScreenLabel" destination="GKN-Li-vnT" id="xIo-db-fHT"/>
@@ -128,14 +179,17 @@
         </scene>
     </scenes>
     <resources>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
