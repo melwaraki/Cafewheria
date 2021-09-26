@@ -24,6 +24,7 @@
 		59EBC2AB26FF97BE00DB6002 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EBC2AA26FF97BE00DB6002 /* Extensions.swift */; };
 		59EBC2B126FF9ABB00DB6002 /* VenuesViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EBC2B026FF9ABB00DB6002 /* VenuesViewController+UITableView.swift */; };
 		59EBC2B326FF9AE000DB6002 /* VenuesViewController+CLLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EBC2B226FF9AE000DB6002 /* VenuesViewController+CLLocationManager.swift */; };
+		59EBC2B52700B47B00DB6002 /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EBC2B42700B47B00DB6002 /* LocationTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		59EBC2AA26FF97BE00DB6002 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		59EBC2B026FF9ABB00DB6002 /* VenuesViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VenuesViewController+UITableView.swift"; sourceTree = "<group>"; };
 		59EBC2B226FF9AE000DB6002 /* VenuesViewController+CLLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VenuesViewController+CLLocationManager.swift"; sourceTree = "<group>"; };
+		59EBC2B42700B47B00DB6002 /* LocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				59B0829226FF221000E72C17 /* CafewheriaTests.swift */,
+				59EBC2B42700B47B00DB6002 /* LocationTests.swift */,
 				59B0829426FF221000E72C17 /* Info.plist */,
 			);
 			path = CafewheriaTests;
@@ -352,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59EBC2B52700B47B00DB6002 /* LocationTests.swift in Sources */,
 				59B0829326FF221000E72C17 /* CafewheriaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
