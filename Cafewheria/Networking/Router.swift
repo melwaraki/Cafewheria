@@ -11,6 +11,7 @@ import Combine
 class Router {
     let clientSecret = "EJ01NG5ALPRC4VMITXXDKEM4AGMPIR5U414V4TTJJP1Y5DT5"
     let clientID = "1BQJUKFMHWZAIHZSKE5MTLECNHXMALRS0Y254UZPRGM5K4RW"
+    let versionNumber = "20180323"
     
     let baseURL = "https://api.foursquare.com/"
     
@@ -18,7 +19,7 @@ class Router {
         return [
             URLQueryItem(name: "client_secret", value: clientSecret),
             URLQueryItem(name: "client_id", value: clientID),
-            URLQueryItem(name: "v", value: "20180323")
+            URLQueryItem(name: "v", value: versionNumber)
         ]
     }
     
