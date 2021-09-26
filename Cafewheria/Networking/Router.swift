@@ -43,26 +43,31 @@ class Router {
         let request = URLRequest(url: url)
         
         let task = URLSession.shared.dataTask(with: request, completionHandler: { data, response, error in
-
-            if let error = error {
-                completion(.failure(error))
-                return
-            }
-
-            guard let data = data else {
-                completion(.failure(CustomError.noData))
-                return
-            }
-            
-            do {
-                let decodedObject = try JSONDecoder().decode(T.self, from: data)
-                completion(Result.success(decodedObject))
-            } catch let decodingError {
-                completion(.failure(decodingError))
+            self.handleDataTask(data: data, response: response, error: error) { result in
+                completion(result)
             }
         })
 
         task.resume()
+    }
+    
+    func handleDataTask<T: Decodable>(data: Data?, response: URLResponse?, error: Error?, completion: @escaping (Result<T, Error>) -> Void) {
+        if let error = error {
+            completion(.failure(error))
+            return
+        }
+        
+        guard let data = data else {
+            completion(.failure(CustomError.noData))
+            return
+        }
+        
+        do {
+            let decodedObject = try JSONDecoder().decode(T.self, from: data)
+            completion(Result.success(decodedObject))
+        } catch {
+            completion(.failure(CustomError.invalidData))
+        }
     }
 }
 

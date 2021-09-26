@@ -30,9 +30,5 @@ class LocationTests: XCTestCase {
         let venue = Venue(id: "1234", name: "Mocka Venue", location: Location(distance: 38495, lat: 0, lng: 0))
         XCTAssertEqual(venue.kmDistanceString, "38.49km")
     }
-    
-    func testVenuesAreCorrectlySorted() {
-        XCTAssertEqual(venues.sorted(), venues.sorted(by: {$0.location.distance < $1.location.distance}))
-    }
 
 }

@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct VenuesRequestResponse: Decodable {
+struct VenuesRequestResponse: Codable {
     let response: VenuesResponse
 }

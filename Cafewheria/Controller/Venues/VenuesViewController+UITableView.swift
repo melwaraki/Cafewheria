@@ -30,7 +30,12 @@ extension VenuesViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        getCell(at: indexPath)
+    }
+    
+    // for testing purposes
+    func getCell(at indexPath: IndexPath, with mockVenues: [Venue]? = nil) -> UITableViewCell {
+        let venues = mockVenues ?? self.venues
         let filteredVenues = indexPath.section == 0 ? venues.filterToNearby() : venues.filterToFar()
         let venue = filteredVenues[indexPath.item]
         

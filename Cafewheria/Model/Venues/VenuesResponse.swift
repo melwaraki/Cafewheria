@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct VenuesResponse: Decodable {
+struct VenuesResponse: Codable {
     let venues: [Venue]
 }

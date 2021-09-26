@@ -21,5 +21,4 @@ class URLTests: XCTestCase {
         
         XCTAssertEqual(url, expectedURL)
     }
-
 }

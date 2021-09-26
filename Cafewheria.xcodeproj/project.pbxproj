@@ -20,6 +20,8 @@
 		59B0828526FF221000E72C17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59B0828426FF221000E72C17 /* Assets.xcassets */; };
 		59B0828826FF221000E72C17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59B0828626FF221000E72C17 /* LaunchScreen.storyboard */; };
 		59B0829E26FF221000E72C17 /* CafewheriaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B0829D26FF221000E72C17 /* CafewheriaUITests.swift */; };
+		59DD4D4A2700FF6A00A0DB97 /* DataTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DD4D492700FF6A00A0DB97 /* DataTaskTests.swift */; };
+		59DD4D4C2701265500A0DB97 /* VenueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DD4D4B2701265500A0DB97 /* VenueTests.swift */; };
 		59EBC2AB26FF97BE00DB6002 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EBC2AA26FF97BE00DB6002 /* Extensions.swift */; };
 		59EBC2B126FF9ABB00DB6002 /* VenuesViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EBC2B026FF9ABB00DB6002 /* VenuesViewController+UITableView.swift */; };
 		59EBC2B326FF9AE000DB6002 /* VenuesViewController+CLLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EBC2B226FF9AE000DB6002 /* VenuesViewController+CLLocationManager.swift */; };
@@ -65,6 +67,8 @@
 		59B0829926FF221000E72C17 /* CafewheriaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CafewheriaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59B0829D26FF221000E72C17 /* CafewheriaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafewheriaUITests.swift; sourceTree = "<group>"; };
 		59B0829F26FF221000E72C17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59DD4D492700FF6A00A0DB97 /* DataTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTaskTests.swift; sourceTree = "<group>"; };
+		59DD4D4B2701265500A0DB97 /* VenueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueTests.swift; sourceTree = "<group>"; };
 		59EBC2AA26FF97BE00DB6002 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		59EBC2B026FF9ABB00DB6002 /* VenuesViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VenuesViewController+UITableView.swift"; sourceTree = "<group>"; };
 		59EBC2B226FF9AE000DB6002 /* VenuesViewController+CLLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VenuesViewController+CLLocationManager.swift"; sourceTree = "<group>"; };
@@ -176,7 +180,9 @@
 			isa = PBXGroup;
 			children = (
 				59EBC2B42700B47B00DB6002 /* LocationTests.swift */,
+				59DD4D4B2701265500A0DB97 /* VenueTests.swift */,
 				59EBC2B82700F59C00DB6002 /* URLTests.swift */,
+				59DD4D492700FF6A00A0DB97 /* DataTaskTests.swift */,
 				59B0829426FF221000E72C17 /* Info.plist */,
 			);
 			path = CafewheriaTests;
@@ -360,7 +366,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				59EBC2B52700B47B00DB6002 /* LocationTests.swift in Sources */,
+				59DD4D4C2701265500A0DB97 /* VenueTests.swift in Sources */,
 				59EBC2B92700F59C00DB6002 /* URLTests.swift in Sources */,
+				59DD4D4A2700FF6A00A0DB97 /* DataTaskTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
