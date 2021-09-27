@@ -15,10 +15,12 @@ enum ViewControllerState {
 
 extension UIViewController {
     func presentErrorAlert(title: String = "Error", message: String) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        alertController.view.tintColor = .systemPurple
-        present(alertController, animated: true)
+        DispatchQueue.main.async {
+            let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            alertController.view.tintColor = .systemPurple
+            self.present(alertController, animated: true)
+        }
     }
 }
 
