@@ -37,12 +37,13 @@ class VenuesViewController: UIViewController {
     }
     
     @IBAction func tappedFeelingLucky(_ sender: Any) {
-        let alert = UIAlertController(title: "Feeling Lucky?", message: "We'll send you to a random coffee shop nearby. That is, only if you're feeling brave enough of course...", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Not Now", style: .cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "Take Me There!", style: .default, handler: { _ in
+        let alertController = UIAlertController(title: "Feeling Lucky?", message: "We'll send you to a random coffee shop nearby. That is, only if you're feeling brave enough of course...", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Not Now", style: .cancel, handler: nil))
+        alertController.addAction(UIAlertAction(title: "Take Me There!", style: .default, handler: { _ in
             self.venues.filterToNearby().randomElement()?.openInMaps()
         }))
-        present(alert, animated: true)
+        alertController.view.tintColor = .systemPurple
+        present(alertController, animated: true)
     }
     
     func decorateInterface() {
@@ -86,15 +87,4 @@ class VenuesViewController: UIViewController {
     }
     
     
-}
-
-extension UIView {
-    func addShadow(color: UIColor = .label) {
-        clipsToBounds = false
-        layer.shadowColor = color.cgColor
-        layer.shadowOffset = CGSize(width: 0, height: 3)
-        layer.shadowRadius = 6.0
-        layer.shadowOpacity = 0.8
-        layer.masksToBounds = false
-    }
 }
