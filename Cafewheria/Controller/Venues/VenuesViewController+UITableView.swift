@@ -30,18 +30,18 @@ extension VenuesViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        getCell(at: indexPath)
-    }
-    
-    // for testing purposes
-    func getCell(at indexPath: IndexPath, with mockVenues: [Venue]? = nil) -> UITableViewCell {
-        let venues = mockVenues ?? self.venues
-        let filteredVenues = indexPath.section == 0 ? venues.filterToNearby() : venues.filterToFar()
-        let venue = filteredVenues[indexPath.item]
-        
+        let venue = getVenue(at: indexPath)
         let cell = tableView.dequeueReusableCell(withIdentifier: "VenueTableViewCell") as! VenueTableViewCell
         cell.setup(with: venue)
         return cell
+    }
+    
+    // for testing purposes
+    func getVenue(at indexPath: IndexPath, in mockVenues: [Venue]? = nil) -> Venue {
+        let venues = mockVenues ?? self.venues
+        let filteredVenues = indexPath.section == 0 ? venues.filterToNearby() : venues.filterToFar()
+        return filteredVenues[indexPath.item]
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

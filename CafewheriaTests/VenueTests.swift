@@ -22,17 +22,17 @@ class VenueTests: XCTestCase {
         XCTAssertEqual(venues.sorted(), venues.sorted(by: {$0.location.distance < $1.location.distance}))
     }
     
-    func testTableViewCorrectlyLaysCells() {
-        testCell(at: IndexPath(item: 0, section: 0), belongsTo: venues[0])
-        testCell(at: IndexPath(item: 1, section: 0), belongsTo: venues[1])
-        testCell(at: IndexPath(item: 0, section: 1), belongsTo: venues[2])
-        testCell(at: IndexPath(item: 1, section: 1), belongsTo: venues[3])
-        testCell(at: IndexPath(item: 2, section: 1), belongsTo: venues[4])
+    func testCorrectVenueIsFetched() {
+        testVenue(at: IndexPath(item: 0, section: 0), is: venues[0])
+        testVenue(at: IndexPath(item: 1, section: 0), is: venues[1])
+        testVenue(at: IndexPath(item: 0, section: 1), is: venues[2])
+        testVenue(at: IndexPath(item: 1, section: 1), is: venues[3])
+        testVenue(at: IndexPath(item: 2, section: 1), is: venues[4])
     }
     
-    func testCell(at indexPath: IndexPath, belongsTo venue: Venue) {
-        let cell = VenuesViewController().getCell(at: indexPath, with: venues)
-        XCTAssertEqual(cell.textLabel?.text, venue.name)
+    func testVenue(at indexPath: IndexPath, is expectedVenue: Venue) {
+        let venue = VenuesViewController().getVenue(at: indexPath, in: venues)
+        XCTAssertEqual(venue, expectedVenue)
     }
 
 }
