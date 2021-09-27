@@ -23,9 +23,10 @@ class VenuesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        state = .loading
         toggleableViews = [activityIndicatorView, emptyScreenLabel, toggleLocationButton, tableView, feelingLuckyButton]
-        setupLocationManager()
         decorateInterface()
+        presentWelcomeScreenIfFirstLaunch()
     }
     
     @IBAction func tappedToggleLocationButton(_ sender: Any) {
@@ -44,6 +45,21 @@ class VenuesViewController: UIViewController {
         }))
         alertController.view.tintColor = .systemPurple
         present(alertController, animated: true)
+    }
+    
+    func presentWelcomeScreenIfFirstLaunch() {
+        
+        guard !UserDefaults.standard.bool(forKey: Constants.SettingsKey.seenWelcomeScreen.rawValue),
+              let welcomeVC = storyboard?.instantiateViewController(withIdentifier: "WelcomeViewController") as? WelcomeViewController else {
+                  setupLocationManager()
+                  return
+              }
+        
+        welcomeVC.isModalInPresentation = true
+        welcomeVC.onDismissal = { [self] in
+            setupLocationManager()
+        }
+        present(welcomeVC, animated: true)
     }
     
     func decorateInterface() {
