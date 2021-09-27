@@ -37,7 +37,12 @@ class VenuesViewController: UIViewController {
     }
     
     @IBAction func tappedFeelingLucky(_ sender: Any) {
-        presentErrorAlert(message: "You're in early")
+        let alert = UIAlertController(title: "Feeling Lucky?", message: "We'll send you to a random coffee shop nearby. That is, only if you're feeling brave enough of course...", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Not Now", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Take Me There!", style: .default, handler: { _ in
+            self.venues.filterToNearby().randomElement()?.openInMaps()
+        }))
+        present(alert, animated: true)
     }
     
     func decorateInterface() {
